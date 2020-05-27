@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  
+ <body>
+   <style>
+     body {
+       background-image:url('https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        background-attachment: fixed;  
+  background-size: cover;
+       background-repeat: no-repeat; /*for small images*/
+     }
+   </style>
+   
+<!--  HTML Image Maps
+   With HTML image-maps, you can create clickable areas on an image.
+Image Maps
+  the <map> tag defines an image-map.
+An image-map is an image with clickable areas.
+Click on the computer, the phone, or the cup of coffee in the image below
+-->
+   <h2>Image maps</h2>
+   <p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+   
+   <img src="https://pbs.twimg.com/media/D1CObWEX4AEG5gO?format=jpg&name=small"  alt="developer workspace" usemap="#workmap" width="300" height="300">
+   
+   <map name="workmap">
+<!-- coords - come in pairs, one for the x-axis and one for the y-axis.
+cordinates = "xpx from the left margin and ypx from the top:"      -->
+     <area shape="rect" coords="0,150,70,250" alt="Computer" href="https://twitter.com/realnicomeyer/status/1103539032749981696" > <!--The coordinates 0, 150 is located 0 pixels from the left margin and 150 pixels from the top:
+The coordinates 70,250 is located 70 pixels from the left margin and 250 pixels from the top
+-->
+     <area shape="rect" coords="100,350,200,470" alt="Keyboard" href="https://en.wikipedia.org/wiki/Apple_Keyboard" >
+     <area shape="circle" coords="" alt="Cup of coffee" href="https://www.amazon.co.uk/Bigmouth-Coffee-Gigantic-Ceramic-Lovers/dp/B00WIB5AB8" >
+   </map>
+   
+   <h3>Background image(using internal css)</h3>
+   
+<!--  The HTML <picture> element allows us to display different pictures for different devices or screen sizes   -->
+   <h1>Picture element</h1>
+   <picture>
+     <source media="(min-width: 650px)" srcset="https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:500px;height:600px;" >
+     <source media="(min-width: 465px)" srcset="https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:500px;height:600px;">
+     <img src="https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Lion" style="width:500px;height:600px;">
+   </picture>
+   
+   
+   
+ </body>
+</html>  
